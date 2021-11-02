@@ -18,10 +18,4 @@ jobs:
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.TERRAFORMSA }}
-  shelljob:
-    name: "Demo"
-    runs-on: ubuntu-latest
-    steps:
-     - name: "Shell Demo"
-       run: curl www.googl.com
-       shell: bash
+  
