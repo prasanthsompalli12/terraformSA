@@ -15,4 +15,4 @@ jobs:
           tf_actions_version: 0.12.18
           tf_actions_subcommand: ['init','plan']
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TERRAFORMSA}}
