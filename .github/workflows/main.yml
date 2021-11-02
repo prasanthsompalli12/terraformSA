@@ -1,24 +1,18 @@
-name: "Terraform GitHub Actions"
-on:[push]
-
+name: 'Terraform GitHub Actions'
+on:
+  - pull_request
 jobs:
   terraform:
-    name: "Terraform Init"
+    name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@master 
-      - name: "Terraform Initialization"
-        uses: hashicorp/terraform-github-actions@master 
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Terraform Init'
+        uses: hashicorp/terraform-github-actions@master
         with:
-          tf_actions_version: 0.12.18
-          tf_actions_subcommand: "init"
+          tf_actions_version: 0.12.13
+          tf_actions_subcommand: 'init'
         env:
           GITHUB_TOKEN: ${{ secrets.TERRAFORMSA }}
-  shelljob:
-    name: "Demo"
-    runs-on: ubuntu-latest
-    steps:
-     - name: "Shell Demo"
-       run: curl www.googl.com
-       shell: bash
+
