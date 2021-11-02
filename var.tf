@@ -18,7 +18,7 @@ variable "rgname" {
 variable "tags" {
   type = map
   default = {
-    owner    = "shan"
+    owner    = "prasanth"
     resource = "storage"
     another  = "tag"
   }
